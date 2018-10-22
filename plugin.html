@@ -1,0 +1,35 @@
+
+<!-- You are within a bootstrap <div class="row">YOUR CODE</div> -->
+<div class="col col-md-6">
+	<p class="note">Select number of loops</p>
+	<div class="form-group"><label>Select Loops</label><select class="form-control" name="envinject_loops">
+			<option>system</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+		</select>
+	</div>
+</div>
+
+<script>
+// On Document Load Register plugin for events.
+$(function(){
+
+	// No prefill logic required, this field will be populated on its own.
+	CustomTest.registerPlugin( 'envinject', function(event,data){
+		switch( event ){
+			case 'prefill':
+				break;
+			// When the plugin is enabled/disabled. event is true|false
+			case 'enabled':
+				break;
+			case 'disabled':
+				break;
+		}
+	});
+})
+</script>
